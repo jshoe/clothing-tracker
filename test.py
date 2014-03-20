@@ -135,45 +135,4 @@ def launch():
     data['user_name'] = greet_user()
 
     updated_time = data['updated_time']
-    if string_to_date(updated_time) < date.today():
-        select_clothes()
     exit()
-
-        
-def main_display():
-    """Shows the main display of clothing display."""
-    #, ITEM, BRAND, WORN_COUNT
-    for item in dictionary_entry:
-        pprint(item, brand, worn_count)
-
-        
-def select_clothes():
-    """Will select your clothing for the day and ask you which you picked."""
-
-    
-def command_dispatch(user):
-    if "accept" in user:
-    elif "shuffle" in user:
-    elif "exit" in user:
-    else:
-        error handling
-    ^ Actually, we're not even using this since the new scheme will be all numbers-based.
-
-    
-def clothes_selection():
-    """Handles the clothing selection algorithm."""
-
-
-def select_clothes_menu_text():
-    """Displays command options for the user."""
-    # TODO: This menu should not be like hard-coded... they should be able to pick as many pieces of clothing that they want.
-    print("\nEnter the # of a command.")
-    print("[1] Accept outfit and mark as worn for the day.")
-
-
-    print("[2] Reshuffle outfit and select a new one.")
-    print("[3] Reshuffle bottom and select a new one.")
-    print("[4] Reshuffle top and select a new one.")
-    print("[5] Return to Main Menu.\n")
-
-launch()

@@ -1,0 +1,1 @@
+{"program_version": "0.1", "user_name": "", "updated_time": date.today().strftime('%Y-%m-%d'), "daily_types": [ ], "items": [ ]}
