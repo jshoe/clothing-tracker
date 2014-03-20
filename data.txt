@@ -2,6 +2,9 @@
   "program_version": "0.1", 
   "user_name": "Jonathan Sheu",
   "updated_time": "2014-03-03",
+  "daily_types": [
+    "shorts", "t-shirts"
+  ],
   "items": [
     {
       "type": "shorts",
@@ -15,7 +18,7 @@
       "washed": [
         "2014-03-01"
       ]
-    }
+    },
     {
       "type": "pants",
       "message": "Nicer pants",
