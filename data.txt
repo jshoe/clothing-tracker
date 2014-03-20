@@ -1,0 +1,33 @@
+{
+  "program_version": "0.1", 
+  "user_name": "Jonathan Sheu",
+  "updated_time": "2014-03-03",
+  "items": [
+    {
+      "type": "shorts",
+      "message": "AE ugly",
+      "details": [
+        {"color": "blue"}, {"style": "khakis"}, {"shade": "light"}
+      ],
+      "worn": [
+        "2014-03-03"
+      ],
+      "washed": [
+        "2014-03-01"
+      ]
+    }
+    {
+      "type": "pants",
+      "message": "Nicer pants",
+      "details": [
+        {"color": "black"}, {"style": "jeans"}, {"shade": "dark"}
+      ],
+      "worn": [
+        "2014-03-18"
+      ],
+      "washed": [
+        "2014-03-01"
+      ]
+    }
+  ]
+}
