@@ -1,0 +1,2 @@
+Things to do:
+    - Add a "favorite categories" functionality, e.g. the categories of clothing that the app will pick from each day automatically :P. 
