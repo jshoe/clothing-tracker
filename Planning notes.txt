@@ -1,7 +1,5 @@
 - 2015-01-16: Definitely some sort of bug in the "Next shorts" function since it returned like jeans to me instead of looping around to the next wear_count level.
-- 2015-01-09: Adjust wear counts and wash settings for your AE jeans (or keep to a separate load).
-- 2014-12-27: A lot of these to-dos I'll probably just ignore.
-- 2014-12-20: Make max wear counts an individual field in each item, so that you can set your jeans to have 4 wears before washing. Fix yet another bug in Clothing Tracker apparently on the Merona Polo part?
+- 2014-12-20: Make max wear counts an individual field in each item, so that you can customize per item. Fix yet another bug in Clothing Tracker apparently on the Merona Polo part?
 - 2014-11-15: Add "Days left of Shirts" (done).
 - 2014-10-30: Big things to implement: tee-polo randomization, skip functionality
 - 2014-09-13: Don't forget to get the jackets to display properly in the app.
@@ -25,13 +23,13 @@
     - Clean up code and add comments.
     - id_num checker / management.
 
-Notes:
+Older notes:
 
 dictionary format:
     Fields: Name of the clothing item, List of dates worn
     Methods: last_worn_date(), worn_count_since_wash()
 
-openning():
+opening():
     Read from the JSON file and do a straight convert into a dictionary.
 
 Main interface:
@@ -47,7 +45,6 @@ Main interface:
 
 
     IF 0, then write to the JSON file and exit.
-
 
 Things to do:
     - Add a "favorite categories" functionality, e.g. the categories of clothing that the app will pick from each day automatically :P.
