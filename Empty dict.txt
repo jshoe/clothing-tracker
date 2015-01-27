@@ -1,1 +1,15 @@
-{"program_version": "0.1", "user_name": "", "updated_time": date.today().strftime('%Y-%m-%d'), "daily_types": [ ], "items": [ ]}
+{
+  "items":[
+    {
+      "type":"shorts",
+      "message":"AE Blue",
+      "color":"blue",
+      "worn":[
+        "2014-03-03"
+      ],
+      "washed":[
+        "2014-03-01"
+      ]
+    }
+  ]
+}

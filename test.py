@@ -3,9 +3,6 @@ from datetime import datetime, date, time
 import pprint
 
 program_version = 0.1
-# TODO: A method for people to input clothing into the database / imoprt their clothing collection :P. Along with a delete and modify function.
-# TODO: Add lots of "input" error control.
-# TODO: Tidy up use of the nonlocal statement :P.
 
 class Item:
     """An item of clothing."""
@@ -26,7 +23,7 @@ class Item:
                 self.soil_count += 1
             elif string_to_date(self.worn[i]) < string_to_date(self.last_washed):
                 break
-            i--
+            i -= 1
         if self.soil_count == 0:
             self.is_clean = True
 
@@ -34,7 +31,7 @@ class Item:
 def string_to_date(date):
     """Converts a string in the format YYYY-MM-DD to a datetime object."""
     date = date.split('-')
-    return datetime(date[0], date[1], date[2])
+    return datetime(int(date[0]), int(date[1]), int(date[2]))
 
 
 def date_to_string(date):
@@ -60,14 +57,14 @@ def add_daily_types(all_types, daily_types):
         daily_types.append(all_types[j - 1])
     return daily_types
 
-    
+
 def launch():
     """Launches the program and loads user data into memory."""
     def launch_text():
         """Displays the program welcome message."""
         print("Welcome to 'Wardrobe'.")
         print("Version " + str(program_version) + "\n")
-    
+
     def greet_user():
         """Prompts the user for a name if not stored, and then greets them."""
         nonlocal data
@@ -82,7 +79,6 @@ def launch():
 
     def set_daily_types():
         """Returns the daily types of clothing items from the database, or prompts the user to select them first."""
-        nonlocal data
         def make_types_list(items):
             """Makes a list of all the types of clothing found in the database."""
             all_types = []
@@ -91,6 +87,7 @@ def launch():
                     all_types.append(i['type'])
             return all_types
 
+        nonlocal data
         daily_types = []
 
         try:
@@ -102,30 +99,30 @@ def launch():
             else:
                 daily_types = add_daily_types(all_types, daily_types)
         return daily_types
-    
+
     def exit():
         """Exports the user data to a text file in JSON and exits."""
         nonlocal data
         nonlocal daily_types
         nonlocal inventory
-        
+
         data['daily_types'] = daily_types
         items = []
         for i in inventory:
             dict = {"type": i.type, "message": i.message, "details": i.details, "worn": i.worn, "washed": i.washed}
             items.append(dict)
         data['items'] = items
-        
+
         with open('data.txt', 'w') as outfile:
             json.dump(data, outfile, indent = 2, sort_keys = True)
 
     launch_text()
-    
+
     try:
         data = json.load(open('data.txt'))
     except IOError:
         data = {"program_version": program_version, "user_name": "", "updated_time": date.today().strftime('%Y-%m-%d'), "daily_types": [ ], "items": [ ]}
-    
+
     daily_types = set_daily_types()
 
     inventory = []
@@ -136,3 +133,5 @@ def launch():
 
     updated_time = data['updated_time']
     exit()
+    
+launch()

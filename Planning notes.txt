@@ -1,2 +1,54 @@
+- 2015-01-16: Definitely some sort of bug in the "Next shorts" function since it returned like jeans to me instead of looping around to the next wear_count level.
+- 2015-01-09: Adjust wear counts and wash settings for your AE jeans (or keep to a separate load).
+- 2014-12-27: A lot of these to-dos I'll probably just ignore.
+- 2014-12-20: Make max wear counts an individual field in each item, so that you can set your jeans to have 4 wears before washing. Fix yet another bug in Clothing Tracker apparently on the Merona Polo part?
+- 2014-11-15: Add "Days left of Shirts" (done).
+- 2014-10-30: Big things to implement: tee-polo randomization, skip functionality
+- 2014-09-13: Don't forget to get the jackets to display properly in the app.
+- 2014-09-04:
+    - Add basic jacket-shirt color matching (or avoiding matching)
+- 2014-09-04:
+    - Figure out how to export to .exe
+- 2014-08-31:
+    - Need to redo the clothing pick algorithm so that it's random (so that it doesn't always go in the same order)
+- 2014-08-29:
+    - Replace more numerical commands with letters (done)
+- 2014-08-27:
+    - Add in your jackets and other outerwear
+- 2014-08-15:
+    - Add a skip / 'next' function to return the second-optimal one (done)
+- 2014-07-22: Extra things you could do:
+    - Making sure the program can handle it when certain fields are empty. Also if there's no match found after sorting by soil wear and wear date.
+
+    - Get the print_inventory output to be sorted in some way.
+    - Support extra properties, long pants, outerwear.
+    - Clean up code and add comments.
+    - id_num checker / management.
+
+Notes:
+
+dictionary format:
+    Fields: Name of the clothing item, List of dates worn
+    Methods: last_worn_date(), worn_count_since_wash()
+
+openning():
+    Read from the JSON file and do a straight convert into a dictionary.
+
+Main interface:
+    Welcome to the clothing tracking program. The day is Sunday, July 20, 2014.
+
+    Enter the number of the item of clothing you want to wear or enter 0 to exit.
+
+    LIST OF CLOTHES
+
+    >>> user input (and verification of input)
+
+    Enter the number of the item of clothing you want to wear or enter 0 to exit.
+
+
+    IF 0, then write to the JSON file and exit.
+
+
 Things to do:
-    - Add a "favorite categories" functionality, e.g. the categories of clothing that the app will pick from each day automatically :P. 
+    - Add a "favorite categories" functionality, e.g. the categories of clothing that the app will pick from each day automatically :P.
+    - Add a "you will need to do laundry by" feature, in days and in the date.
